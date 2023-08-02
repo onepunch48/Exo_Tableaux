@@ -1,3 +1,4 @@
+// exercice 1
 let myAlphabet = [
   "A",
   "B",
@@ -32,40 +33,49 @@ let myAlphabet = [
   "+",
 ];
 
-// Length
+myAlphabet.length;
 console.log(myAlphabet.length);
 
-myAlphabetLength(myAlphabet);
-function myAlphabetLength(arr) {
-  console.log("The length of the array is:", arr.length);
+function myAlphabetLength() {
+  console.log(myAlphabet.length);
 }
+myAlphabetLength();
+// function myArrLength(myArray) {
+//   console.log("My alphabet length is ", myArray.length);
+// }
+// myArrLength(myAlphabet);
 
-// foreach + Index
+// exercice 2
 
-let planets = ["Terre", "Mars", "Mercure", "Venus", "Jupiter"];
+let planets = ["Terre", "Pluton", "Venus", "Uranus", "Mars"];
 
 planets.forEach((planet, Index) => {
   console.log(planet, Index);
 });
 
-// forEach + typeof + Index
-let someDataTypes = ["Coucou", 10, true, null];
+//exercice 3
 
-someDataTypes.forEach((dataType, Index) => {
-  console.log(dataType, typeof dataType, Index);
+let someDataTypes = [1, "Coucou", true, null];
+
+someDataTypes.forEach((data, Index) => {
+  console.log(data, typeof data, Index);
 });
 
-//EmptyArray
-let emptyArray = [];
-console.log(emptyArray);
+//exercice 4
 
-emptyArray.push("Mangue", 10, "Coucou toi", 1);
-console.log(emptyArray);
+let emptyArea = [];
 
-let copyEmptyArray = emptyArray.slice();
-console.log(copyEmptyArray);
+console.log(emptyArea);
 
-//How many letters
+emptyArea.push("Coucou toi", 10);
+
+console.log(emptyArea);
+
+let copyEmptyArea = emptyArea.slice();
+
+console.log(copyEmptyArea);
+
+//exercice 5
 
 let furnitures = ["Table", "Chairs", "Couch"];
 
@@ -73,7 +83,7 @@ furnitures.forEach((furniture) =>
   furniture.split("").forEach((letters) => console.log(letters))
 );
 
-// Wich is a number
+//exercice 6
 
 let values1 = ["Apple", 1, false, "2"];
 let values2 = [`5`, "Fries", 2, true];
@@ -90,12 +100,10 @@ console.log(values1, values2, values3);
 let studentCoursesA = ["Math", "English", "Programming"];
 let studentCoursesB = ["Geography", "Spanish", "Programming"];
 
-function commondWords(studentCoursesA, studentCoursesB) {
-  const commonWords = studentCoursesA.filter((course) =>
-    studentCoursesB.includes(course)
-  );
+function commonWords(arr1, arr2) {
+  const commonWords = arr1.filter((course) => arr2.includes(course));
   return commonWords;
 }
 
-const commonCourses = commondWords(studentCoursesA, studentCoursesB);
+const commonCourses = commonWords(studentCoursesA, studentCoursesB);
 console.log(commonCourses);
