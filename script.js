@@ -40,10 +40,6 @@ function myAlphabetLength() {
   console.log(myAlphabet.length);
 }
 myAlphabetLength();
-// function myArrLength(myArray) {
-//   console.log("My alphabet length is ", myArray.length);
-// }
-// myArrLength(myAlphabet);
 
 // exercice 2
 
@@ -64,16 +60,14 @@ someDataTypes.forEach((data, Index) => {
 //exercice 4
 
 let emptyArea = [];
-
-console.log(emptyArea);
-
-emptyArea.push("Coucou toi", 10);
-
 console.log(emptyArea);
 
 let copyEmptyArea = emptyArea.slice();
+emptyArea.push("Coucou toi", 10);
+console.log(emptyArea);
 
-console.log(copyEmptyArea);
+let copyEmptyArea1 = copyEmptyArea.slice();
+console.log(copyEmptyArea1);
 
 //exercice 5
 
